@@ -3,13 +3,21 @@
     --aside-black-color: #222224;
     --white-color: #FFFFFF;
     --grey-color: #f8f8f8;
+    --header-icon-color: #e8e8e8;
     --medium-grey-color: #9f9f9f;
+    --radio-grey-color: #a4a4a4;
     --dark-grey-color: #5D5D5D;
     --menu-grey-color: #6F6E6E;
+    --input-grey-color: #e1e1e1;
+    --input-registration-color: #A4A4A4;
+    --input-registration-text-color: #b1b1b1;
     --pink-color: #F1E4E6;
     --dark-pink-color: #F16D7F;
     --medium-pink-color:  #FF6A6A;
     --all-products-pink-color: #F26376;
+    --footer-button-subscribe-color: #E05C6E;
+    --pallido-pink-color: #F8F3F4;
+    --hover-cards-color: rgba(58, 56, 56, 0.86);
 }
 
 body {
@@ -41,10 +49,28 @@ body {
 }
 
 .header__navigation {
+    position: absolute;
     background: var(--white-color);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-end;
+    width: 232px;
+    height: 764px;
+    top: 55px;
+    left: 120px;
+    z-index: 2;
+}
+
+.header__button-nav {
+    position: relative;
+}
+
+.header__button:hover + .header__navigation {
+    display: block;
+}
+
+.header__button:focus + .header__navigation {
+    display: block;
 }
 
 .header__title {
@@ -52,7 +78,7 @@ body {
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
-    margin: 37px 143px 24px 0;
+    margin: 37px 0 24px 0;
 }
 
 .header__sub-title {
@@ -77,6 +103,10 @@ body {
     color: var(--menu-grey-color);
 }
 
+.header a {
+    text-decoration: none;
+}
+
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -86,6 +116,15 @@ body {
 
 .header__logo {
     margin-right: 41px;
+}
+
+.header__button-icon {
+    fill: var(--header-icon-color);
+}
+
+.header__button-icon:hover, .header__button-icon:focus {
+    fill: var(--dark-pink-color);
+    cursor: pointer;
 }
 
 .header__button {
@@ -207,8 +246,10 @@ body {
     margin-bottom: 48px;
 }
 
-.product__button {
-    display: none;
+.products__button:hover, .products__button:focus {
+    background-color: var(--dark-pink-color);
+    color: var(--white-color);
+    cursor: pointer;
 }
 
 .product__list {
@@ -221,9 +262,49 @@ body {
 .product__item {
     width: 360px;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .product__img {
+    display: block;
+}
+
+.product__hover {
+    display: none;
+    width: 360px;
+    height: 420px;
+    position: absolute;
+    background: var(--hover-cards-color);
+    top: 0;
+}
+
+.product__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 138px;
+    height: 43px;
+    position: absolute;
+    margin: auto;
+    top: 188px;
+    left: 110px;
+    background: transparent;
+    border: 1px solid var(--white-color);
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--white-color);
+}
+
+.product__button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    fill: var(--white-color);
+}
+
+.product__item:hover .product__hover{
     display: block;
 }
 
@@ -345,6 +426,81 @@ body {
     font-weight: normal;
 }
 
+.footer__form-subscription {
+    display: flex;
+    margin-top: 32px;
+}
+
+.footer__input-subscription {
+    padding: 1.5em;
+    width: 200px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border:none;
+    background: var(--input-grey-color);
+}
+
+.footer__button-subscribe {
+    background: var(--footer-button-subscribe-color);
+    border: 1px solid var(--medium-pink-color);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 1.5em;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--white-color);
+}
+
+.footer__button-subscribe:hover {
+    cursor: pointer;
+}
+
+.footer__input-subscription::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--aside-black-color);
+    opacity: 0.67;
+}
+.footer__input-subscription::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.footer__input-subscription::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.footer__input-subscription:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.footer__input-subscription:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.footer__input-subscription:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer__input-subscription:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer__input-subscription:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer__input-subscription:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 .footer__bottom {
     background: var(--aside-black-color);
 }
@@ -365,4 +521,174 @@ body {
 .footer__bottom-item {
     align-self: center;
     margin-right: 7px;
+}
+
+.registration__title {
+    background: var(--pallido-pink-color);
+}
+
+.registration__title-text {
+    min-height: 148px;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: var(--dark-pink-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.registration__forms {
+    margin: 64px 0 96px 0;
+}
+
+.registration__legend {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.registration__input {
+    padding: 1em;
+    display: block;
+    margin-bottom: 20px;
+    width: 360px;
+    border: 1px solid var(--input-registration-color);
+}
+
+.registration__input-name::-webkit-input-placeholder {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--input-registration-text-color);
+}
+
+.registration__sex-radio {
+    display: none;
+}
+
+.registration__sex {
+    margin: 34px 0 35px 0;
+}
+
+.registration__sex-label {
+    position: relative;
+    margin-left: 46px;
+}
+
+.registration__sex-label::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: -30px;
+    top: -2px;
+    border: 1px solid var(--radio-grey-color);
+    border-radius: 50%;
+}
+
+.registration__sex-label::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -25px;
+    top: 2px;
+    border: 1px solid var(--footer-button-subscribe-color);
+    border-radius: 50%;
+    background: var(--medium-pink-color);
+    display: none;
+}
+
+.registration__sex-radio:checked + .registration__sex-label::after {
+    display: block;
+}
+
+.registration__item-form {
+    max-width: 360px;
+}
+
+.registration__form-text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--input-registration-text-color);
+}
+
+.registration__button {
+    background: var(--footer-button-subscribe-color);
+    border: 1px solid var(--medium-pink-color);
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    min-width: 167px;
+    min-height: 50px;
+    margin-top: 39px;
+    cursor: pointer ;
+}
+
+.registration__button-arrow {
+    fill: var(--white-color);
+    margin-left: 20px;
+}
+
+.registration__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration__item {
+    max-width: 650px;
+}
+
+.registration__box-title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.registration__box-text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 21px;
+}
+
+.registration__box-list {
+    margin-left: 25px;
+}
+
+.registration__box-item {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.registration__box-item::before {
+    content: '';
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    background-repeat: no-repeat;
+    background-image: url(../img/check-mark.svg);
+    background-size: 15px 15px;
+}
+
+.footer__icon {
+    padding: 10px;
+    fill: black;
+    background: var(--white-color);
+}
+
+.footer__icon:hover {
+    fill: var(--white-color);
+    background: var(--dark-pink-color);
 }
