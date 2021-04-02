@@ -546,15 +546,14 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
-    margin-bottom: 20px;
 }
 
 .registration__input {
     padding: 1em;
     display: block;
-    margin-bottom: 20px;
     width: 360px;
     border: 1px solid var(--input-registration-color);
+    margin-top: 20px;
 }
 
 .registration__input-name::-webkit-input-placeholder {
@@ -614,6 +613,7 @@ body {
     font-size: 13px;
     line-height: 16px;
     color: var(--input-registration-text-color);
+    margin-top: 15px;
 }
 
 .registration__button {
@@ -655,7 +655,7 @@ body {
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 }
 
 .registration__box-list {
