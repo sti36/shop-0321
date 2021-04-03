@@ -17,7 +17,9 @@
     <header class="header">
         <div class="container header__container">
             <div>
-                <img class="header__logo" src="./img/logo.svg" alt="logo" width="44" height="38">
+                <a href="./index.html">
+                    <img class="header__logo" src="./img/logo.svg" alt="logo" width="44" height="38">
+                </a>
                 <svg class="header__button-icon" width="27" height="28" viewBox="0 0 27 28"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -88,7 +90,7 @@
                             d="M14.5 19.937C19 19.937 22.656 15.464 22.656 9.968C22.656 4.472 19 0 14.5 0C13.3631 0.0217413 12.2463 0.303398 11.2351 0.823397C10.2239 1.34339 9.34507 2.08794 8.66602 3C7.12663 4.99573 6.30819 7.45381 6.34399 9.974C6.34399 15.465 10 19.937 14.5 19.937ZM14.5 1.813C18 1.813 20.844 5.472 20.844 9.969C20.844 14.466 17.998 18.125 14.5 18.125C11.002 18.125 8.15603 14.465 8.15503 9.969C8.15403 5.473 11 1.813 14.5 1.813ZM20.844 18.125C20.6036 18.125 20.373 18.2205 20.203 18.3905C20.033 18.5605 19.9375 18.7911 19.9375 19.0315C19.9375 19.2719 20.033 19.5025 20.203 19.6725C20.373 19.8425 20.6036 19.938 20.844 19.938C22.526 19.9399 24.1386 20.6088 25.3279 21.7982C26.5172 22.9875 27.1861 24.6 27.188 26.282C27.1875 26.5221 27.0918 26.7523 26.922 26.9221C26.7522 27.0918 26.5221 27.1875 26.282 27.188H2.71997C2.47985 27.1875 2.24975 27.0918 2.07996 26.9221C1.91016 26.7523 1.81449 26.5221 1.81396 26.282C1.81608 24.6001 2.48517 22.9877 3.67444 21.7985C4.86371 20.6092 6.47608 19.9401 8.15796 19.938C8.39824 19.938 8.62868 19.8425 8.79858 19.6726C8.96849 19.5027 9.06396 19.2723 9.06396 19.032C9.06396 18.7917 8.96849 18.5613 8.79858 18.3914C8.62868 18.2215 8.39824 18.126 8.15796 18.126C5.99541 18.1279 3.92201 18.9875 2.39258 20.5164C0.863144 22.0453 0.00264777 24.1185 0 26.281C0.000794067 27.0019 0.287502 27.693 0.797241 28.2027C1.30698 28.7125 1.99811 28.9992 2.71899 29H26.282C27.0027 28.9989 27.6936 28.7121 28.2031 28.2024C28.7126 27.6927 28.9992 27.0017 29 26.281C28.9974 24.1187 28.1372 22.0457 26.6083 20.5168C25.0793 18.9878 23.0063 18.1276 20.844 18.125Z" />
                     </svg>
                 </a>
-                <a href="#">
+                <a href="./cart.html">
                     <svg class="header__button-icon" width="33" height="29" viewBox="0 0 33 29"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -106,7 +108,7 @@
                             class="brand__pink-sub-title">fashion</span></span></h1>
             </div>
         </section>
-        <section class="promotions container">
+        <section class="promotion container">
             <h2 class="visually-hidden">promotions</h2>
             <ul class="promotion__list">
                 <li class="promotion__item promotion__item--women">
@@ -135,9 +137,9 @@
                 </li>
             </ul>
         </section>
-        <section class="products container">
-            <h2 class="products__title">Fetured Items</h2>
-            <p class="products__text">Shop for items based on what we featured in this week</p>
+        <section class="product container">
+            <h2 class="product__title-section">Fetured Items</h2>
+            <p class="product__text-section">Shop for items based on what we featured in this week</p>
             <ul class="product__list">
                 <li class="product__item product">
                     <img class="product__img" src="./img/men's-jacket.jpg" alt="men's-jacket" width="360" height="420">
@@ -207,7 +209,7 @@
                     </div>
                     <div class="product__description">
                         <h3 class="product__title">ellery x m'o capsule</h3>
-                        <p class="product__text">!!!Known for her sculptural takes on traditional tailoring, Australian
+                        <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
                             arbiter
                             of cool Kym Ellery
                             teams up with Moda Operandi.</p>
@@ -254,7 +256,7 @@
                     </div>
                 </li>
             </ul>
-            <button type="button" class="products__button">Browse All Product</button>
+            <button type="button" class="product__button-all">Browse All Product</button>
         </section>
         <section class="aside">
             <ul class="aside__list container">
@@ -283,16 +285,17 @@
         </section>
     </main>
     <footer class="footer">
-        <section class="footer__top">
-            <ul class="footer__top-list container">
-                <li class="footer__top-item">
-                    <img class="footer__top-avatar" src="./img/review-avatar.png" alt="review-avatar">
-                    <p class="footer__top-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
+        <section class="footer__review">
+            <ul class="footer__review-list container">
+                <li class="footer__review-item">
+                    <img class="footer__review-avatar" src="./img/review-avatar.png" alt="review-avatar">
+                    <p class="footer__review-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
                         purus
                         condimentum“</p>
                 </li>
-                <li class="footer__top-item">
-                    <h2 class="footer__top-title-subscription">subscribe<span class="footer__top-subscription">for our
+                <li class="footer__review-item">
+                    <h2 class="footer__review-title-subscription">subscribe<span class="footer__review-subscription">for
+                            our
                             newletter and promotion</span></h2>
                     <form class="footer__form-subscription" action="#">
                         <input class="footer__input-subscription" type="email" placeholder="Enter Your Email">
@@ -301,11 +304,11 @@
                 </li>
             </ul>
         </section>
-        <section class="footer__bottom">
-            <ul class="footer__bottom-list container">
-                <p class="footer__bottom-copyrigh">© 2021 Brand All Rights Reserved.</p>
-                <li class="footer__bottom-item">
-                    <a class="footer__bottom-social-link" href="#">
+        <section class="footer__social">
+            <ul class="footer__social-list container">
+                <p class="footer__social-copyrigh">© 2021 Brand All Rights Reserved.</p>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
                         <svg class="footer__icon" width="9" height="15" viewBox="0 0 9 15"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -313,8 +316,8 @@
                         </svg>
                     </a>
                 </li>
-                <li class="footer__bottom-item">
-                    <a class="footer__bottom-social-link" href="#">
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
                         <svg class="footer__icon" width="16" height="15" viewBox="0 0 16 15"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -322,24 +325,22 @@
                         </svg>
                     </a>
                 </li>
-                <li class="footer__bottom-item">
-                    <a class="footer__bottom-social-link" href="#">
-                        <svg class="footer__icon" width="17" height="14" viewBox="0 0 17 14"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M14.417 3.74052C14.427 3.88264 14.427 4.0248 14.427 4.16692C14.427 8.50192 11.1498 13.4969 5.15986 13.4969C3.31448 13.4969 1.60022 12.9588 0.158203 12.0248C0.420396 12.0552 0.67247 12.0654 0.944752 12.0654C2.46741 12.0654 3.8691 11.5476 4.98843 10.6644C3.5565 10.6339 2.3565 9.68977 1.94305 8.39027C2.14475 8.4207 2.34642 8.44102 2.5582 8.44102C2.85063 8.44102 3.14308 8.40039 3.41533 8.32936C1.92291 8.02477 0.803551 6.70498 0.803551 5.11108V5.07048C1.23715 5.31414 1.74139 5.46642 2.2758 5.4867C1.39849 4.89786 0.823727 3.8928 0.823727 2.75573C0.823727 2.14661 0.985041 1.58823 1.26741 1.10092C2.87077 3.09077 5.28086 4.39023 7.98334 4.53239C7.93293 4.28873 7.90266 4.03495 7.90266 3.78114C7.90266 1.97402 9.35477 0.501953 11.1598 0.501953C12.0976 0.501953 12.9446 0.897891 13.5396 1.53748C14.2757 1.39536 14.9816 1.12123 15.6068 0.745609C15.3648 1.50705 14.8505 2.14664 14.1749 2.5527C14.8304 2.48167 15.4657 2.29889 16.0505 2.04511C15.6069 2.69483 15.0522 3.27348 14.417 3.74052Z" />
-                        </svg>
-
-                    </a>
-                </li>
-                <li class="footer__bottom-item">
-                    <a class="footer__bottom-social-link" href="#">
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
                         <svg class="footer__icon" width="13" height="14" viewBox="0 0 13 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M6.74032 0.203125C3.55564 0.203125 0.408203 2.34063 0.408203 5.8C0.408203 8 1.63738 9.25 2.38233 9.25C2.68963 9.25 2.86655 8.3875 2.86655 8.14375C2.86655 7.85313 2.13091 7.23438 2.13091 6.025C2.13091 3.5125 4.03055 1.73125 6.4889 1.73125C8.60271 1.73125 10.1671 2.94062 10.1671 5.1625C10.1671 6.82187 9.50597 9.93437 7.36422 9.93437C6.59133 9.93437 5.93018 9.37187 5.93018 8.56563C5.93018 7.38438 6.74963 6.24062 6.74963 5.02187C6.74963 2.95312 3.835 3.32812 3.835 5.82812C3.835 6.35313 3.90018 6.93437 4.13298 7.4125C3.70463 9.26875 2.82931 12.0344 2.82931 13.9469C2.82931 14.5375 2.91311 15.1188 2.96899 15.7094C3.07452 15.8281 3.02175 15.8156 3.18316 15.7563C4.74757 13.6 4.69169 13.1781 5.3994 10.3562C5.78119 11.0875 6.76826 11.4812 7.55046 11.4812C10.8469 11.4812 12.3275 8.24688 12.3275 5.33125C12.3275 2.22813 9.66427 0.203125 6.74032 0.203125Z" />
                         </svg>
-
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">
+                        <svg class="footer__icon" width="17" height="14" viewBox="0 0 17 14"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.417 3.74052C14.427 3.88264 14.427 4.0248 14.427 4.16692C14.427 8.50192 11.1498 13.4969 5.15986 13.4969C3.31448 13.4969 1.60022 12.9588 0.158203 12.0248C0.420396 12.0552 0.67247 12.0654 0.944752 12.0654C2.46741 12.0654 3.8691 11.5476 4.98843 10.6644C3.5565 10.6339 2.3565 9.68977 1.94305 8.39027C2.14475 8.4207 2.34642 8.44102 2.5582 8.44102C2.85063 8.44102 3.14308 8.40039 3.41533 8.32936C1.92291 8.02477 0.803551 6.70498 0.803551 5.11108V5.07048C1.23715 5.31414 1.74139 5.46642 2.2758 5.4867C1.39849 4.89786 0.823727 3.8928 0.823727 2.75573C0.823727 2.14661 0.985041 1.58823 1.26741 1.10092C2.87077 3.09077 5.28086 4.39023 7.98334 4.53239C7.93293 4.28873 7.90266 4.03495 7.90266 3.78114C7.90266 1.97402 9.35477 0.501953 11.1598 0.501953C12.0976 0.501953 12.9446 0.897891 13.5396 1.53748C14.2757 1.39536 14.9816 1.12123 15.6068 0.745609C15.3648 1.50705 14.8505 2.14664 14.1749 2.5527C14.8304 2.48167 15.4657 2.29889 16.0505 2.04511C15.6069 2.69483 15.0522 3.27348 14.417 3.74052Z" />
+                        </svg>
                     </a>
                 </li>
             </ul>

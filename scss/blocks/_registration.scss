@@ -1,0 +1,144 @@
+.registration__title {
+    background: $pallido-pink-color;
+
+    &-text {
+        @include font(24px, 29px, 400);
+        min-height: 148px;
+        text-transform: uppercase;
+        color: $dark-pink-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.registration__forms {
+    margin: 64px 0 96px 0;
+}
+
+.registration__legend {
+    @include font(16px, 19px, 300);
+}
+
+.registration__input {
+    padding: 1em;
+    display: block;
+    width: 360px;
+    border: 1px solid $input-registration-color;
+    margin-top: 20px;
+
+    &-name::-webkit-input-placeholder {
+        @include font(13px, 16px, 300);
+        color: $input-registration-text-color;
+    }
+}
+
+.registration__sex {
+    margin: 34px 0 35px 0;
+
+    &-radio {
+        display: none;
+
+        &:checked + .registration__sex-label::after {
+            display: block;
+        }
+    }
+
+    &-label {
+        position: relative;
+        margin-left: 46px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: -30px;
+            top: -2px;
+            border: 1px solid $radio-grey-color;
+            border-radius: 50%;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            left: -25px;
+            top: 2px;
+            border: 1px solid $footer-button-subscribe-color;
+            border-radius: 50%;
+            background: $medium-pink-color;
+            display: none;
+        }
+    }
+}
+
+.registration__item {
+    max-width: 650px;
+
+    &-form {
+        max-width: 360px;
+    }
+}
+
+.registration__form-text {
+    @include font(13px, 16px, 300);
+    color: $input-registration-text-color;
+    margin-top: 15px;
+}
+
+.registration__button {
+    @include font(14px, 17px, 400);
+    background: $footer-button-subscribe-color;
+    border: 1px solid $medium-pink-color;
+    text-transform: uppercase;
+    color: $white-color;
+    min-width: 167px;
+    min-height: 50px;
+    margin-top: 39px;
+    cursor: pointer;
+
+    &-arrow {
+        fill: $white-color;
+        margin-left: 20px;
+    }
+}
+
+.registration__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration__box-title {
+    @include font(24px, 29px, 300);
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.registration__box-text {
+    @include font(24px, 29px, 300);
+    margin-bottom: 20px;
+}
+
+.registration__box-list {
+    margin-left: 25px;
+}
+
+.registration__box-item {
+    @include font(24px, 29px, 300);
+    margin-bottom: 16px;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 20px;
+        height: 16px;
+        position: absolute;
+        top: 5px;
+        left: -25px;
+        background-repeat: no-repeat;
+        background-image: url(../img/check-mark.svg);
+        background-size: 15px 15px;
+    }
+}
