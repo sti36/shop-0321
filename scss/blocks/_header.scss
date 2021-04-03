@@ -1,0 +1,92 @@
+.header {
+    background-color: $black-color;
+
+    &__navigation {
+        position: absolute;
+        background: $white-color;
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 232px;
+        height: 764px;
+        top: 55px;
+        left: 120px;
+        z-index: 2;
+    }
+    
+    &__button-nav {
+        position: relative;
+    }
+
+    &__title {
+        @include font(14px, 17px, 700);
+        text-transform: uppercase;
+        margin: 37px 0 24px 0;
+    }
+    
+    &__sub-title {
+        @include font(14px, 17px, 400);
+        text-transform: uppercase;
+        color: $dark-pink-color;
+        margin: 0 126px 12px 0;
+    }
+    
+    &__sub-navigation-list{
+        margin: 12px 0 20px 21px;
+    }
+    
+    &__sub-navigation-item {
+        margin-bottom: 11px;
+    }
+    
+    &__sub-navigation-link {
+        @include font(14px, 17px, 400);
+        color: $menu-grey-color;
+    }
+    
+    & a {
+        text-decoration: none;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 75px;
+    }
+    
+    &__logo {
+        margin-right: 41px;
+    }
+    
+    &__button-icon {
+        fill: $header-icon-color;
+
+        &:hover {
+            fill: $dark-pink-color;
+            cursor: pointer;
+        }
+        &:focus {
+            fill: $dark-pink-color;
+            cursor: pointer;
+        }
+    }
+    
+    &__button {
+        background: transparent;
+        border: none;
+        margin-right: 33px;
+
+        &:hover + .header__navigation {
+            display: block;
+        }
+
+        &:focus + .header__navigation {
+            display: block;
+        }
+    }
+    
+    &__authorization {
+        margin-right: 33px;
+    }
+}

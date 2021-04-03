@@ -1,0 +1,112 @@
+.product {
+    margin-bottom: 96px;
+
+    &__title-section {
+        @include font(30px, 36px, 400);
+        text-align: center;
+        margin-bottom: 6px;
+        color: $black-color;
+    }
+    
+    &__text-section {
+        @include font(14px, 17px, 400);
+        text-align: center;
+        color: $medium-grey-color;
+        margin-bottom: 48px;
+    }
+    
+    &__button-all {
+        @include font(16px, 19px, 400);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 211px;
+        height: 47px;
+        background: transparent;
+        border: 1px solid $medium-pink-color;
+        color: $all-products-pink-color;
+    
+        &:hover, &:focus {
+            background-color: $dark-pink-color;
+            color: $white-color;
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 19px;
+    }
+    
+    &__item {
+        width: 360px;
+        margin-bottom: 30px;
+        position: relative;
+
+        &:hover .product__hover{
+            display: block;
+        }
+    }
+    
+    &__img {
+        display: block;
+    }
+    
+    &__hover {
+        display: none;
+        width: 360px;
+        height: 420px;
+        position: absolute;
+        background: $hover-cards-color;
+        top: 0;
+    }
+    
+    &__button {
+        @include font(14px, 17px, 400);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 138px;
+        height: 43px;
+        position: absolute;
+        margin: auto;
+        top: 188px;
+        left: 110px;
+        background: transparent;
+        border: 1px solid $white-color;
+        color: $white-color;
+    }
+    
+    &__button-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        fill: $white-color;
+    }
+    
+    &__description {
+        background: $grey-color;
+        padding: 25px 29px 20px 17px;
+    }
+    
+    &__title {
+        @include font(13px, 16px, 400);
+        text-transform: uppercase;
+        margin-bottom: 13px;
+    }
+    
+    &__text {
+        @include font(14px, 17px, 300);
+        color: $dark-grey-color;
+        margin-bottom: 18px;
+    }
+    
+    &__price {
+        @include font(16px, 19px, 400);
+        color: $dark-pink-color;
+    }
+}

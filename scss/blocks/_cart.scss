@@ -1,0 +1,177 @@
+.cart {
+
+    &__title {
+        background: $pallido-pink-color;
+    
+        &-text {
+            @include font(24px, 29px, 400);
+            min-height: 148px;
+            text-transform: uppercase;
+            color: $dark-pink-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    
+    &__products {
+        margin-top: 96px;
+    
+        &-form {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        &-item {
+            min-width: 652px;
+            min-height: 306px;
+            display: flex;
+            margin-bottom: 40px;
+            box-shadow: 1.4em 1.4em 15px rgba(122,122,122,0.2);
+        }
+    
+        &-info {
+            padding: 22px 22px 62px 31px;
+    
+            &-title {
+                @include font(24px, 29px, 400);
+                text-transform: uppercase;
+                margin-bottom: 42px;
+            }
+            
+            &-text {
+                @include font(22px, 26px, 400);
+                color: $cart-text-color;
+                margin-bottom: 6px;
+    
+                &-price {
+                    color: $dark-pink-color;
+                }
+    
+                &-quantity {
+                    @include font(22px, 26px, 400);
+                    color: $cart-text-color;
+                    display: flex;
+                }
+            }
+    
+            &-input {
+                margin-left: 24px;
+                max-width: 43px;
+                max-height: 24px;
+                text-align: center;
+                border: 1px solid $cart-input-color;
+                color: $cart-input-text-color;
+            }
+        }
+    
+        &-button {
+            display: flex;
+            justify-content: space-between;
+            margin: 72px 0 129px 0;
+    
+            &-clear {
+                @include font(14px, 16px, 300);
+                text-transform: uppercase;
+                width: 234px;
+                height: 49px;
+                border: 1px solid $radio-grey-color;
+                background: $white-color;
+                cursor: pointer;
+            }
+    
+            &-back {
+                @include font(14px, 16px, 300);
+                text-transform: uppercase;
+                padding: 17px 40px;
+                border: 1px solid $radio-grey-color;
+                background: $white-color;
+                text-decoration: none;
+                color: $black-color;
+            }
+        }
+    }
+    
+    &__arrage {
+        margin-left: 128px;
+    }
+    
+    &__adress {
+    
+        &-title {
+            @include font(16px, 19px, 300);
+            color: $black-color;
+            text-transform: uppercase;
+            margin-bottom: 21px;
+        }
+    
+        &-input {
+            padding: 1em;
+            display: block;
+            width: 360px;
+            border: 1px solid $input-registration-color;
+            margin-top: 20px;
+        }
+    
+        &-button {
+            @include font(11px, 13px, 300);
+                text-transform: uppercase;
+                width: 100px;
+                height: 34px;
+                border: 1px solid $radio-grey-color;
+                background: $white-color;
+                cursor: pointer;
+                margin-top: 24px;
+        }
+    }
+    
+    &__checkout {
+        margin-top: 57px;
+        background: $cart-checkout-color;
+        max-width: 360px;
+        max-height: 214px;
+        padding: 39px 34px 42px 44px;
+    
+        &-sub {
+            @include font(11px, 13px, 400);
+            text-align: right;
+            color: $input-registration-color;
+            text-transform: uppercase;
+    
+            &-price {
+                margin-left: 20px;
+            }
+        }
+    
+        &-grand {
+            @include font(16px, 19px, 300);
+            text-align: right;
+            text-transform: uppercase;
+            margin: 12px 0 39px 0;
+    
+            &-price {
+                color: $dark-pink-color;
+                margin-left: 20px;
+            }
+        }
+    
+        &-hr {
+            border: 0.1px solid $cart-hr-color;
+            margin-bottom: 17px;
+        }
+    
+        &-button {
+            display: flex;
+            margin: 0 auto;
+            min-width: 273px;
+            min-height: 50px;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            background: $dark-pink-color;
+            border: 1px solid $medium-pink-color;
+            color: $white-color;
+            cursor: pointer;
+        }
+    }
+}

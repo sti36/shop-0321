@@ -100,66 +100,63 @@
             </div>
         </div>
     </header>
-    <main>
-        <section class="registration__title">
-            <p class="registration__title-text container">registration</p>
+    <main class="cart">
+        <section class="cart__title">
+            <h1 class="cart__title-text container">shopping cart</h1>
         </section>
-        <section class="registration__forms">
-            <ul class="registration__list container">
-                <li class="registration__item-form">
-                    <form action="#" class="registration__form">
-                        <fieldset>
-                            <legend class="registration__legend">Your Name</legend>
-                            <input class="registration__input" id="first-name" type="text" placeholder="First Name"
-                                required>
-                            <input class="registration__input" id="last-name" type="text" placeholder="Last Name"
-                                required>
-                            <div class="registration__sex">
-                                <input class="registration__sex-radio" id="male-sex" name="sex" type="radio"
-                                    value="male">
-                                <label class="registration__sex-label" for="male-sex">Male</label>
-                                <input class="registration__sex-radio" id="female-sex" name="sex" type="radio"
-                                    value="female"> <label class="registration__sex-label"
-                                    for="female-sex">Female</label>
-                            </div>
-                            <label class="registration__legend">Login details</label>
-                            <input class="registration__input" id="login" type="email" placeholder="Email" required>
-                            <input class="registration__input" id="login" type="password" placeholder="Password"
-                                required>
-                            <p class="registration__form-text">Please use 8 or more characters, with at least 1 number
-                                and a mixture of uppercase and
-                                lowercase letters</p>
-                            <button class="registration__button" type="submit">join now <svg
-                                    class="registration__button-arrow" width="17" height="10" viewBox="0 0 17 10"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path clip-rule="evenodd"
-                                        d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z" />
-                                    <path clip-rule="evenodd"
-                                        d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z" />
-                                </svg>
-                            </button>
-                        </fieldset>
-                    </form>
-                </li>
-                <li class="registration__item">
-                    <h1 class="registration__box-title">loyalty has its perks</h1>
-                    <p class="registration__box-text">Get in on the loyalty program where you can earn points and unlock
-                        serious perks. Starting with
-                        these as soon as you join:</p>
-                    <ul class="registration__box-list">
-                        <li class="registration__box-item">15% off welcome offer
-                        </li>
-                        <li class="registration__box-item">Free shipping, returns and exchanges on all orders
-
-                        </li>
-                        <li class="registration__box-item">$10 off a purchase on your birthday
-
-                        </li>
-                        <li class="registration__box-item">Early access to products</li>
-                        <li class="registration__box-item">Exclusive offers & rewards</li>
-                    </ul>
-                </li>
-            </ul>
+        <section class="cart__products">
+            <form action="#" class="cart__products-form container">
+                <ul class="cart__products-list">
+                    <li class="cart__products-item">
+                        <img src="./img/men's-sweater.jpg" alt="men's-sweater" width="262" height="306">
+                        <div class="cart__products-info">
+                            <h2 class="cart__products-info-title">mango people t-shirt</h2>
+                            <p class="cart__products-info-text">Price: <span
+                                    class="cart__products-info-text-price">$300</span>
+                            </p>
+                            <p class="cart__products-info-text">Color: Red</p>
+                            <p class="cart__products-info-text">Size: XL</p>
+                            <p class="cart__products-info-text-quantity">Quantity:<input
+                                    class="cart__products-info-input" type="number" min="1" value="2" id="quantity">
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cart__products-item">
+                        <img src="./img/cart-man.jpg" alt="cart-man" width="262" height="306">
+                        <div class="cart__products-info">
+                            <h2 class="cart__products-info-title">mango people t-shirt</h2>
+                            <p class="cart__products-info-text">Price: <span
+                                    class="cart__products-info-text-price">$300</span>
+                            </p>
+                            <p class="cart__products-info-text">Color: Red</p>
+                            <p class="cart__products-info-text">Size: XL</p>
+                            <p class="cart__products-info-text-quantity">Quantity:<input
+                                    class="cart__products-info-input" type="number" min="1" value="2" id="quantity">
+                            </p>
+                        </div>
+                    </li>
+                    <div class="cart__products-button">
+                        <button type="reset" class="cart__products-button-clear">clear shopping cart</button>
+                        <a href="#" class="cart__products-button-back">continue shopping</a>
+                    </div>
+                </ul>
+                <ul class="cart__arrage">
+                    <li class="cart__adress">
+                        <h2 class="cart__adress-title">shipping adress</h2>
+                        <input class="cart__adress-input" id="adress" type="text" placeholder="Bangladesh" required>
+                        <input class="cart__adress-input" id="adress" type="text" value="State" required>
+                        <input class="cart__adress-input" id="adress" type="text" value="Postcode / Zip" required>
+                        <button class="cart__adress-button" type="button">get a quote</button>
+                    </li>
+                    <li class="cart__checkout">
+                        <p class="cart__checkout-sub">sub total <span class="cart__checkout-sub-price">$900</span></p>
+                        <p class="cart__checkout-grand">grand total <span class="cart__checkout-grand-price">$900</span>
+                        </p>
+                        <hr class="cart__checkout-hr">
+                        <button class="cart__checkout-button" type="submit">proceed to checkout</button>
+                    </li>
+                </ul>
+            </form>
         </section>
     </main>
     <footer class="footer">

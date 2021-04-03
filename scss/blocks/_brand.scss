@@ -1,0 +1,28 @@
+.brand {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 63px;
+
+    &__title-container {
+        background: $pink-color;
+        flex-grow: 1;
+        padding-left: 92px;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__title {
+        @include font(48px, 58px, 900);
+        text-transform: uppercase;
+    }
+    
+    &__sub-title {
+        @include font(32px, 38px, 700);
+        display: block;
+    }
+    
+    &__pink-sub-title {
+        color: $dark-pink-color;
+    }
+}
