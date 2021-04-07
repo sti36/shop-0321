@@ -1,10 +1,26 @@
 .footer__review {
     background-image: url(../img/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &-list {
         min-height: 448px;
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            width: 81%;
+            flex-direction: column;
+            align-items: center;
+            padding: 53px 0 0 0;
+            height: 693px;
+            justify-content: space-evenly;
+        }
+
+        @include mobile {
+            height: 550px;
+            padding: 0 0 59px 0;
+        }
     }
     
     &-item {
@@ -20,20 +36,32 @@
     }
     
     &-text {
-        @include font(20px, 24px, 360);
+        @include font(20px, 24px, 400);
         text-align: center;
         color: $aside-black-color;
+
+        @include mobile {
+            @include font(18px, 22px, 400);
+        }
     }
     
     &-title-subscription {
         @include font(24px, 40px, 700);
         text-align: center;
         text-transform: uppercase;
+
+        @include mobile {
+            @include font(24px, 36px, 700);
+        }
     }
     
     &-subscription {
         @include font(18px, 28px, 400);
         display: block;
+
+        @include mobile {
+            @include font(14px, 22px, 400);
+        }
     }
 }
 
@@ -49,6 +77,11 @@
     border-bottom-left-radius: 25px;
     border:none;
     background: $input-grey-color;
+
+    @include mobile {
+        width: 187px;
+        padding: 1em;
+    }
 
     &::-webkit-input-placeholder {
         @include font(14px, 17px, 400);
@@ -105,6 +138,10 @@
     padding: 1.5em;
     color: $white-color;
 
+    @include mobile {
+        padding: 1em;
+    }
+
     &:hover {
         cursor: pointer;
     }
@@ -116,6 +153,12 @@
     &-list {
         display: flex;
         min-height: 79px;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &-copyrigh {
@@ -123,11 +166,24 @@
         color: $white-color;
         align-self: center;
         flex-grow: 1;
+
+        @include mobile {
+            padding: 0 0 9px 0;
+        }
     }
 
     &-item {
         align-self: center;
         margin-right: 7px;
+    
+        @include mobile {
+            margin: 43px 7px 40px 7px;
+        }
+    }
+
+    &-mobile {
+        display: flex;
+        align-items: center;
     }
 }
 

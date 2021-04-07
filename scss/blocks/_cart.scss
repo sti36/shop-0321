@@ -11,38 +11,84 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            @include mobile {
+                align-items: center;
+            }
         }
     }
     
     &__products {
         margin-top: 96px;
+
+        @include tablet {
+            margin-top: 59px;
+        }
+
+        &-img {
+            width: 50%;
+            height: auto;
+
+            @include mobile {
+                width: 39%;
+            }
+        }
+
+        &-list {
+            width: 58%;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
     
         &-form {
             display: flex;
             justify-content: space-between;
+
+            @include tablet {
+                flex-direction: column;
+            }
         }
     
         &-item {
-            min-width: 652px;
-            min-height: 306px;
             display: flex;
             margin-bottom: 40px;
             box-shadow: 1.4em 1.4em 15px rgba(122,122,122,0.2);
         }
     
         &-info {
-            padding: 22px 22px 62px 31px;
+            padding: 22px 0 62px 31px;
+
+            @include mobile {
+                width: 57%;
+                padding: 13px 0 38px 17px;
+            }
     
             &-title {
                 @include font(24px, 29px, 400);
                 text-transform: uppercase;
                 margin-bottom: 42px;
+                width: 62%;
+
+                @include tablet {
+                    width: 94%;
+                }
+
+                @include mobile {
+                    @include font(16px, 19px, 400);
+                    width: 61%;
+                }
             }
             
             &-text {
                 @include font(22px, 26px, 400);
                 color: $cart-text-color;
                 margin-bottom: 6px;
+
+                @include mobile {
+                    @include font(14px, 17px, 400);
+                }
     
                 &-price {
                     color: $dark-pink-color;
@@ -52,12 +98,16 @@
                     @include font(22px, 26px, 400);
                     color: $cart-text-color;
                     display: flex;
+
+                    @include mobile {
+                        @include font(14px, 17px, 400);
+                    }
                 }
             }
     
             &-input {
                 margin-left: 24px;
-                max-width: 43px;
+                max-width: 11%;
                 max-height: 24px;
                 text-align: center;
                 border: 1px solid $cart-input-color;
@@ -68,35 +118,80 @@
         &-button {
             display: flex;
             justify-content: space-between;
-            margin: 72px 0 129px 0;
+            margin: 72px auto 129px auto;
+
+            @include tablet {
+                justify-content: space-around;
+                margin: 62px auto 64px auto;
+            }
+
+            @include mobile {
+                justify-content: space-between;
+                margin: 30px auto 48px auto;
+            }
     
             &-clear {
                 @include font(14px, 16px, 300);
                 text-transform: uppercase;
-                width: 234px;
-                height: 49px;
+                width: 44%;
+                height: 51px;
                 border: 1px solid $radio-grey-color;
                 background: $white-color;
                 cursor: pointer;
+
+                @include mobile {
+                    @include font(12px, 14px, 400);
+                    height: 32px;
+                }
             }
     
             &-back {
                 @include font(14px, 16px, 300);
                 text-transform: uppercase;
-                padding: 17px 40px;
+                width: 44%;
+                height: 49px;
                 border: 1px solid $radio-grey-color;
                 background: $white-color;
                 text-decoration: none;
                 color: $black-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile {
+                    @include font(12px, 14px, 400);
+                    height: 32px;
+                }
             }
         }
     }
     
     &__arrage {
-        margin-left: 128px;
+        width: 31%;
+        margin: 0 auto 0 128px;
+
+        @include tablet {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 147px auto;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            margin: 0 auto 96px auto;
+        }
     }
     
     &__adress {
+
+        @include tablet {
+            width: 48%;
+        }
+
+        @include mobile {
+            width: 100%
+        }
     
         &-title {
             @include font(16px, 19px, 300);
@@ -108,7 +203,7 @@
         &-input {
             padding: 1em;
             display: block;
-            width: 360px;
+            width: 93%;
             border: 1px solid $input-registration-color;
             margin-top: 20px;
         }
@@ -128,15 +223,26 @@
     &__checkout {
         margin-top: 57px;
         background: $cart-checkout-color;
-        max-width: 360px;
-        max-height: 214px;
-        padding: 39px 34px 42px 44px;
+        max-width: 100%;
+        min-height: auto;
+        padding: 1px 0;
+
+        @include tablet {
+            margin-top: 40px;
+            width: 48%
+        }
+
+        @include mobile {
+            margin-top: 48px;
+            width: 100%;
+        }
     
         &-sub {
             @include font(11px, 13px, 400);
             text-align: right;
             color: $input-registration-color;
             text-transform: uppercase;
+            margin: 39px 34px 12px auto;
     
             &-price {
                 margin-left: 20px;
@@ -147,7 +253,7 @@
             @include font(16px, 19px, 300);
             text-align: right;
             text-transform: uppercase;
-            margin: 12px 0 39px 0;
+            margin: 0 37px 21px auto;
     
             &-price {
                 color: $dark-pink-color;
@@ -157,13 +263,13 @@
     
         &-hr {
             border: 0.1px solid $cart-hr-color;
-            margin-bottom: 17px;
+            margin: 0 42px 17px;
         }
     
         &-button {
             display: flex;
-            margin: 0 auto;
-            min-width: 273px;
+            margin: 0 auto 42px auto;
+            min-width: 83%;
             min-height: 50px;
             align-items: center;
             justify-content: center;
@@ -172,6 +278,14 @@
             border: 1px solid $medium-pink-color;
             color: $white-color;
             cursor: pointer;
+
+            @include tablet {
+                min-width: 74%;
+            }
+
+            @include mobile {
+                min-width: 83%;
+            }
         }
     }
 }
