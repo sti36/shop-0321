@@ -12,6 +12,26 @@
         top: 55px;
         left: 120px;
         z-index: 2;
+
+        @include tablet {
+            left: -20%;
+            top: 165%;
+            height: 600px;
+            width: 232px;
+        }
+
+        @include mobile {
+            left: -702%;
+            width: 830%;
+        }
+
+        &-item {
+            margin: 0 0 0 34px;
+
+            @include tablet {
+                margin: 0 0 0 30px;
+            }
+        }
     }
     
     &__button-nav {
@@ -21,7 +41,11 @@
     &__title {
         @include font(14px, 17px, 700);
         text-transform: uppercase;
-        margin: 37px 0 24px 0;
+        margin: 37px 0 24px 34px;
+
+        @include tablet {
+            margin: 15px 0 20px 20px;
+        }
     }
     
     &__sub-title {
@@ -84,9 +108,24 @@
         &:focus + .header__navigation {
             display: block;
         }
+
+        @include mobile {
+            margin-right: 0px;
+        }
     }
-    
-    &__authorization {
-        margin-right: 33px;
+
+    &__registration {
+        margin: 0 33px 0 0;
+        
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__cart {
+        
+        @include mobile {
+            display: none;
+        }
     }
 }

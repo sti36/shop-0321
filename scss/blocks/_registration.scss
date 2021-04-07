@@ -9,11 +9,26 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include mobile {
+            align-items: center;
+        }
     }
 }
 
 .registration__forms {
-    margin: 64px 0 96px 0;
+    margin: 64px auto 96px auto;
+
+    @include tablet {
+        width: 96%;
+        margin: 40px auto 96px auto;
+    }
+
+    @include mobile {
+        margin: 0;
+        margin-top: 40px;
+        width: 100%
+    }
 }
 
 .registration__legend {
@@ -23,9 +38,13 @@
 .registration__input {
     padding: 1em;
     display: block;
-    width: 360px;
+    width: 85%;
     border: 1px solid $input-registration-color;
     margin-top: 20px;
+
+    @include mobile {
+        width: 94%;
+    }
 
     &-name::-webkit-input-placeholder {
         @include font(13px, 16px, 300);
@@ -75,10 +94,26 @@
 }
 
 .registration__item {
-    max-width: 650px;
+    width: 57%;
+
+    @include tablet {
+        width: 49%;
+    }
+
+    @include mobile {
+        width: 94%;
+    }
 
     &-form {
-        max-width: 360px;
+        width: 57%;
+
+        @include tablet {
+            width: 49%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
@@ -86,6 +121,7 @@
     @include font(13px, 16px, 300);
     color: $input-registration-text-color;
     margin-top: 15px;
+    width: 92%
 }
 
 .registration__button {
@@ -96,8 +132,12 @@
     color: $white-color;
     min-width: 167px;
     min-height: 50px;
-    margin-top: 39px;
+    margin: 39px auto 0 auto;
     cursor: pointer;
+
+    @include mobile {
+        margin: 39px auto 40px auto;
+    }
 
     &-arrow {
         fill: $white-color;
@@ -108,17 +148,32 @@
 .registration__list {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+        margin: 0 auto 100px auto
+    }
 }
 
 .registration__box-title {
     @include font(24px, 29px, 300);
     text-transform: uppercase;
     margin-bottom: 22px;
+
+    @include tablet {
+        @include font(16px, 19px, 300);
+        margin-bottom: 32px;
+    }
 }
 
 .registration__box-text {
     @include font(24px, 29px, 300);
     margin-bottom: 20px;
+
+    @include tablet {
+        @include font(16px, 19px, 300);
+        margin-bottom: 22px;
+    }
 }
 
 .registration__box-list {
@@ -129,6 +184,11 @@
     @include font(24px, 29px, 300);
     margin-bottom: 16px;
     position: relative;
+
+    @include tablet {
+        @include font(16px, 19px, 300);
+        margin-bottom: 16px;
+    }
 
     &::before {
         content: '';

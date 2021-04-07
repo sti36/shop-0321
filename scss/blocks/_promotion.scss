@@ -1,5 +1,14 @@
 .promotion {
-    margin-bottom: 67px;
+    margin: 0 auto 67px auto;
+
+    @include tablet {
+        width: 96%;
+        margin: 0 auto 154px auto;
+    }
+
+    @include mobile {
+        margin: 0 auto 64px auto;
+    }
 
     &__list {
         display: flex;
@@ -8,12 +17,22 @@
     }
     
     &__item {
-        width: 360px;
+        width: 31%;
         min-height: 260px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin: 0 auto 30px auto;
+
+        @include tablet {
+            width: 32%;
+            margin: 0 auto 19px auto;
+        }
+
+        @include mobile {
+            width: 91%;
+            margin: 0 auto 32px auto;
+        }
     }
     
     &__link {
@@ -53,5 +72,14 @@
         background-image: url("../img/sale-accesories.jpg");
         background-size: cover;
         width: 100%;
+
+        @include tablet {
+            min-height: 116px;
+        }
+
+        @include mobile {
+            min-height: 111px;
+            width: 91%;
+        }
     }
 }

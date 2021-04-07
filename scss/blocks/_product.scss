@@ -1,5 +1,9 @@
 .product {
-    margin-bottom: 96px;
+    margin: 0 auto 96px auto;
+
+    @include tablet {
+        margin: 0 auto 65px auto;
+    }
 
     &__title-section {
         @include font(30px, 36px, 400);
@@ -12,7 +16,15 @@
         @include font(14px, 17px, 400);
         text-align: center;
         color: $medium-grey-color;
-        margin-bottom: 48px;
+        margin: 0 auto 48px auto;
+
+        @include tablet {
+            margin: 0 auto 74px auto;
+        }
+
+        @include mobile {
+            margin: 0 auto 65px auto;
+        }
     }
     
     &__button-all {
@@ -35,9 +47,13 @@
 
     &__list {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        margin-bottom: 19px;
+        margin: 0 0 19px 0;
+
+        @include tablet {
+            margin: 0 0 2px 0;
+        }
     }
     
     &__item {
@@ -45,7 +61,7 @@
         margin-bottom: 30px;
         position: relative;
 
-        &:hover .product__hover{
+        &:hover .product__hover, &:focus .product__hover{
             display: block;
         }
     }
