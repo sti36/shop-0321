@@ -71,7 +71,7 @@
 }
 
 .footer__input-subscription {
-    padding: 1.5em;
+    padding: 1em;
     width: 200px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -135,7 +135,7 @@
     border: 1px solid $medium-pink-color;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    padding: 1.5em;
+    padding: 1em;
     color: $white-color;
 
     @include mobile {
@@ -188,8 +188,8 @@
 }
 
 .footer__icon {
-    min-width: 25px;
-    min-height: 25px;
+    min-width: 33px;
+    min-height: 33px;
     padding: 7px;
     fill: $black-color;
     background: $white-color;

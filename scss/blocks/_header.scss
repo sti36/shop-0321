@@ -25,12 +25,8 @@
             width: 830%;
         }
 
-        &-item {
-            margin: 0 0 0 34px;
-
-            @include tablet {
-                margin: 0 0 0 30px;
-            }
+        &-list {
+            margin: 0 0 0 22px;
         }
     }
     
@@ -41,33 +37,36 @@
     &__title {
         @include font(14px, 17px, 700);
         text-transform: uppercase;
-        margin: 37px 0 24px 34px;
+        margin: 10px auto 24px 24px;
 
         @include tablet {
             margin: 15px 0 20px 20px;
         }
     }
     
-    &__sub-title {
-        @include font(14px, 17px, 400);
-        text-transform: uppercase;
-        color: $dark-pink-color;
-        margin: 0 126px 12px 0;
+    &__sub {
+        &-title {
+            @include font(14px, 17px, 400);
+            text-transform: uppercase;
+            color: $dark-pink-color;
+        }
+
+        &__sub-navigation{
+            
+            &-item {
+            margin-bottom: 11px;
+            }
+
+            &-list {
+                margin: 0 0 0 12px;
+            }
+
+            &-link {
+                @include font(14px, 17px, 400);
+                color: $menu-grey-color;
+            }
+        }
     }
-    
-    &__sub-navigation-list{
-        margin: 12px 0 20px 21px;
-    }
-    
-    &__sub-navigation-item {
-        margin-bottom: 11px;
-    }
-    
-    &__sub-navigation-link {
-        @include font(14px, 17px, 400);
-        color: $menu-grey-color;
-    }
-    
     & a {
         text-decoration: none;
     }
@@ -81,6 +80,10 @@
     
     &__logo {
         margin-right: 41px;
+
+        @include mobile {
+            margin-left: 16px;
+        }
     }
     
     &__button-icon {
@@ -93,24 +96,6 @@
         &:focus {
             fill: $dark-pink-color;
             cursor: pointer;
-        }
-    }
-    
-    &__button {
-        background: transparent;
-        border: none;
-        margin-right: 33px;
-
-        &:hover + .header__navigation {
-            display: block;
-        }
-
-        &:focus + .header__navigation {
-            display: block;
-        }
-
-        @include mobile {
-            margin-right: 0px;
         }
     }
 
@@ -129,3 +114,7 @@
         }
     }
 }
+
+.burger {
+    margin: 0 25px 0 0;
+}   
