@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/custom.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
-        rel="stylesheet">
     <title>Shop</title>
 </head>
 
@@ -29,7 +26,7 @@
             <div class="dropdown header__button-nav">
                 <button class="btn btn-secondary dropdown-toggle burger" type="button" id="dropdownMenuButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="header__button-icon" width="27" height="28" width="32" height="23" viewBox="0 0 32 23"
+                    <svg class="header__button-icon" width="32" height="23" viewBox="0 0 32 23"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" />
                     </svg>
@@ -120,7 +117,7 @@
                             <p class="cart__products-info-text">Color: Red</p>
                             <p class="cart__products-info-text">Size: XL</p>
                             <p class="cart__products-info-text-quantity">Quantity:<input
-                                    class="cart__products-info-input" type="number" min="1" value="2" id="quantity">
+                                    class="cart__products-info-input" type="number" min="1" value="2" id="quantity-1">
                             </p>
                         </div>
                     </li>
@@ -135,21 +132,21 @@
                             <p class="cart__products-info-text">Color: Red</p>
                             <p class="cart__products-info-text">Size: XL</p>
                             <p class="cart__products-info-text-quantity">Quantity:<input
-                                    class="cart__products-info-input" type="number" min="1" value="2" id="quantity">
+                                    class="cart__products-info-input" type="number" min="1" value="2" id="quantity-2">
                             </p>
                         </div>
                     </li>
-                    <div class="cart__products-button">
+                    <li class="cart__products-button">
                         <button type="reset" class="cart__products-button-clear">clear shopping cart</button>
                         <a href="#" class="cart__products-button-back">continue shopping</a>
-                    </div>
+                    </li>
                 </ul>
                 <ul class="cart__arrage">
                     <li class="cart__address">
                         <h2 class="cart__address-title">shipping adress</h2>
-                        <input class="cart__address-input" id="adress" type="text" placeholder="Bangladesh" required>
-                        <input class="cart__address-input" id="adress" type="text" value="State" required>
-                        <input class="cart__address-input" id="adress" type="text" value="Postcode / Zip" required>
+                        <input class="cart__address-input" id="country" type="text" placeholder="Bangladesh" required>
+                        <input class="cart__address-input" id="state" type="text" value="State" required>
+                        <input class="cart__address-input" id="postcode" type="text" value="Postcode / Zip" required>
                         <button class="cart__address-button" type="button">get a quote</button>
                     </li>
                     <li class="cart__checkout">
@@ -164,7 +161,7 @@
         </section>
     </main>
     <footer class="footer">
-        <section class="footer__review">
+        <div class="footer__review">
             <ul class="footer__review-list container">
                 <li class="footer__review-item">
                     <img class="footer__review-avatar" src="./img/review-avatar.png" alt="review-avatar">
@@ -182,13 +179,13 @@
                     </form>
                 </li>
             </ul>
-        </section>
-        <section class="footer__social">
-            <ul class="footer__social-list container">
+        </div>
+        <div class="footer__social">
+            <div class="footer__social-list container">
                 <div class="footer__social-mobile">
                     <p class="footer__social-copyrigh">© 2021 Brand All Rights Reserved.</p>
                 </div>
-                <div class="footer__social-mobile">
+                <ul class="footer__social-mobile">
                     <li class="footer__social-item">
                         <a class="footer__social-link" href="#">
                             <svg class="footer__icon" width="9" height="15" viewBox="0 0 9 15"
@@ -225,14 +222,11 @@
                             </svg>
                         </a>
                     </li>
-                </div>
-            </ul>
-        </section>
+                </ul>
+            </div>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-        crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
