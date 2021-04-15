@@ -26,7 +26,7 @@
             <div class="dropdown header__button-nav">
                 <button class="btn btn-secondary dropdown-toggle burger" type="button" id="dropdownMenuButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg class="header__button-icon" width="27" height="28" width="32" height="23" viewBox="0 0 32 23"
+                    <svg class="header__button-icon" width="32" height="23" viewBox="0 0 32 23"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" />
                     </svg>
@@ -284,7 +284,7 @@
         </section>
     </main>
     <footer class="footer">
-        <section class="footer__review">
+        <div class="footer__review">
             <ul class="footer__review-list container">
                 <li class="footer__review-item">
                     <img class="footer__review-avatar" src="./img/review-avatar.png" alt="review-avatar">
@@ -302,13 +302,13 @@
                     </form>
                 </li>
             </ul>
-        </section>
-        <section class="footer__social">
-            <ul class="footer__social-list container">
+        </div>
+        <div class="footer__social">
+            <div class="footer__social-list container">
                 <div class="footer__social-mobile">
                     <p class="footer__social-copyrigh">© 2021 Brand All Rights Reserved.</p>
                 </div>
-                <div class="footer__social-mobile">
+                <ul class="footer__social-mobile">
                     <li class="footer__social-item">
                         <a class="footer__social-link" href="#">
                             <svg class="footer__icon" width="9" height="15" viewBox="0 0 9 15"
@@ -345,9 +345,9 @@
                             </svg>
                         </a>
                     </li>
-                </div>
-            </ul>
-        </section>
+                </ul>
+            </div>
+        </div>
     </footer>
     <script src="./js/bootstrap.bundle.js"></script>
 </body>
