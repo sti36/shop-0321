@@ -17,6 +17,7 @@
         padding: 0 0 0 92px;
         display: flex;
         align-items: center;
+        position: relative;
 
         @include tablet {
             padding: 0 0 0 68px;
@@ -31,6 +32,26 @@
     &__title {
         @include font(48px, 58px, 900);
         text-transform: uppercase;
+
+        &::before {
+            width: 12px;
+            height: 92px;
+            content: '';
+            background: $dark-pink-color;
+            position: absolute;
+            left: 64px;
+
+            @include tablet {
+                left: 40px;
+            }
+
+            @include mobile {
+                width: 12px;
+                height: 61px;
+                left: 56px;
+                top: 150px;
+            }
+        }
 
         @include tablet {
             @include font(44px, 52px, 900);

@@ -46,19 +46,17 @@
     }
 
     &__list {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: 581px;      
         margin: 0 0 19px 0;
-
         @include tablet {
             margin: 0 0 2px 0;
         }
     }
     
     &__item {
-        width: 360px;
-        margin: 0 10px 30px 10px;
         position: relative;
 
         &:hover .product__hover, &:focus .product__hover{
@@ -67,13 +65,15 @@
     }
     
     &__img {
+        width: 100%;
+        height: auto;
         display: block;
     }
     
     &__hover {
         display: none;
-        width: 360px;
-        height: 420px;
+        width: 100%;
+        height: 100%;
         position: absolute;
         background: $hover-cards-color;
         top: 0;
@@ -89,8 +89,9 @@
         height: 43px;
         position: absolute;
         margin: auto;
-        top: 188px;
-        left: 110px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background: transparent;
         border: 1px solid $white-color;
         color: $white-color;
