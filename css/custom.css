@@ -27,10 +27,7 @@ a {
   padding-right: 30px;
 }
 
-.container {
-  padding-left: 0;
-  padding-right: 0;
-}
+
 
 .carousel {
   background: #F7F7F7;
@@ -43,7 +40,8 @@ a {
 .carousel-inner {
   width: 46%;
   margin: 0px 28%;
-  height: auto; 
+  height: auto;
+  padding: 10px 0;
 }
 
 .w-100 {
@@ -75,4 +73,14 @@ a {
 
 .carousel-control-next:hover, .carousel-control-prev:hover {
   fill: #F16D7F;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 70%;
+  }
 }

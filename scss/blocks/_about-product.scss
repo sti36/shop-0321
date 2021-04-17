@@ -1,21 +1,31 @@
 .about-product {
-    background: white;
+    background: $white-color;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: -50px 8% 0 8%;
+    margin: -50px auto 0 auto;
     z-index: 1;
-    position: absolute;
     border: 1px solid $about-border-color;
 
     @include tablet {
         margin: 0;
     }
 
-    &-center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    &-box {
+        position: relative;
+        width: 71%;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0 0 128px 0;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            margin: 0 0 64px 0;
+        }
     }
 
     &__title {
@@ -113,21 +123,5 @@
             fill: $about-price-color;
             margin: 0 23px 0 -23px;
         }
-    }
-}
-
-.margin-top-665 {
-    margin: 665px auto 0 auto;
-
-    @include mobile {
-        margin: 730px auto 0 auto;
-    }
-}
-
-.margin-top-128 {
-    margin: 128px auto 0 auto;
-
-    @include mobile {
-        margin: 34px auto 0 auto;
     }
 }

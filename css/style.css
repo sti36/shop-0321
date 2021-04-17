@@ -117,6 +117,39 @@ body {
   }
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breadcrumb-list {
+  display: flex;
+}
+
+.breadcrumb-item {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #636363;
+}
+
+.breadcrumb-link-active {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #F16D7F;
+}
+
+.breadcrumb-link:hover {
+  color: #F16D7F;
+}
+
 .header {
   background-color: #222222;
 }
@@ -151,7 +184,7 @@ body {
 }
 
 .header__navigation-list {
-  margin: 0 0 0 22px;
+  margin: 0 0 0 25px;
 }
 
 .header__button-nav {
@@ -274,6 +307,7 @@ body {
   padding: 0 0 0 92px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 @media (max-width: 1023px) {
@@ -294,6 +328,30 @@ body {
   line-height: 58px;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.brand__title::before {
+  width: 12px;
+  height: 92px;
+  content: '';
+  background: #F16D7F;
+  position: absolute;
+  left: 64px;
+}
+
+@media (max-width: 1023px) {
+  .brand__title::before {
+    left: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .brand__title::before {
+    width: 12px;
+    height: 61px;
+    left: 56px;
+    top: 150px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -386,7 +444,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 30px auto;
+  margin: 0 0 30px 0;
 }
 
 @media (max-width: 1023px) {
@@ -520,9 +578,10 @@ body {
 }
 
 .product__list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  grid-auto-rows: 581px;
   margin: 0 0 19px 0;
 }
 
@@ -533,8 +592,6 @@ body {
 }
 
 .product__item {
-  width: 360px;
-  margin: 0 10px 30px 10px;
   position: relative;
 }
 
@@ -543,13 +600,15 @@ body {
 }
 
 .product__img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 .product__hover {
   display: none;
-  width: 360px;
-  height: 420px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   background: rgba(58, 56, 56, 0.86);
   top: 0;
@@ -567,8 +626,9 @@ body {
   height: 43px;
   position: absolute;
   margin: auto;
-  top: 188px;
-  left: 110px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: transparent;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
@@ -1008,9 +1068,9 @@ body {
 .registration__sex-label::after {
   content: '';
   position: absolute;
-  width: 9px;
-  height: 9px;
-  left: -25px;
+  width: 10px;
+  height: 10px;
+  left: -26px;
   top: 2px;
   border: 1px solid #E05C6E;
   border-radius: 50%;
@@ -1111,6 +1171,10 @@ body {
     font-weight: 300;
     margin-bottom: 32px;
   }
+}
+
+.registration__box-list {
+  margin: 0 auto 0 25px;
 }
 
 .registration__box-text {
@@ -11726,13 +11790,12 @@ textarea.form-control-lg {
   }
 }
 .about-product {
-  background: white;
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: -50px 8% 0 8%;
+  margin: -50px auto 0 auto;
   z-index: 1;
-  position: absolute;
   border: 1px solid #EAEAEA;
 }
 
@@ -11742,10 +11805,25 @@ textarea.form-control-lg {
   }
 }
 
-.about-product-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.about-product-box {
+  position: relative;
+  width: 71%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 0 0 128px 0;
+}
+
+@media (max-width: 1023px) {
+  .about-product-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-product-box {
+    margin: 0 0 64px 0;
+  }
 }
 
 .about-product__title {
@@ -11861,25 +11939,5 @@ textarea.form-control-lg {
 .about-product__button-icon {
   fill: #EF5B70;
   margin: 0 23px 0 -23px;
-}
-
-.margin-top-665 {
-  margin: 665px auto 0 auto;
-}
-
-@media (max-width: 767px) {
-  .margin-top-665 {
-    margin: 730px auto 0 auto;
-  }
-}
-
-.margin-top-128 {
-  margin: 128px auto 0 auto;
-}
-
-@media (max-width: 767px) {
-  .margin-top-128 {
-    margin: 34px auto 0 auto;
-  }
 }
 /*# sourceMappingURL=style.css.map */
