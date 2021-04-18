@@ -7,14 +7,28 @@
         text-transform: uppercase;
         position: relative;
 
+        @include mobile {
+            @include font(12px, 14px, 400);
+        }
+
         &-group {
             position: relative;
             display: flex;
             margin: 51px auto 64px auto;
 
+            @include tablet {
+                justify-content: space-between;
+                margin: 24px auto 40px auto;
+            }
+
             &-center {
                 display: block;
                 margin: auto;
+
+                @include tablet {
+                    display: flex;
+                    margin: 0;
+                }
             }
 
             &-arrow {
@@ -27,11 +41,19 @@
 
         &-center {
             margin: 0 auto 0 20px;
+
+            @include mobile {
+                margin: 0;
+            }
         }
 
         &-filter {
         @include font(14px, 17px, 600);
             color: $black-color;
+
+            @include mobile {
+                @include font(12px, 14px, 600);
+            }
 
             &-icon {
                 fill: $black-color;
@@ -197,6 +219,10 @@
             width: 284px;
             height: 43px;
             margin: 0 auto 96px auto;
+
+            @include tablet {
+                margin: 0 auto 63px auto;
+            }
         }
 
         &-item {

@@ -11973,15 +11973,37 @@ textarea.form-control-lg {
   position: relative;
 }
 
+@media (max-width: 767px) {
+  .catalog__dropdown {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+}
+
 .catalog__dropdown-group {
   position: relative;
   display: flex;
   margin: 51px auto 64px auto;
 }
 
+@media (max-width: 1023px) {
+  .catalog__dropdown-group {
+    justify-content: space-between;
+    margin: 24px auto 40px auto;
+  }
+}
+
 .catalog__dropdown-group-center {
   display: block;
   margin: auto;
+}
+
+@media (max-width: 1023px) {
+  .catalog__dropdown-group-center {
+    display: flex;
+    margin: 0;
+  }
 }
 
 .catalog__dropdown-group-arrow {
@@ -11995,11 +12017,25 @@ textarea.form-control-lg {
   margin: 0 auto 0 20px;
 }
 
+@media (max-width: 767px) {
+  .catalog__dropdown-center {
+    margin: 0;
+  }
+}
+
 .catalog__dropdown-filter {
   font-size: 14px;
   line-height: 17px;
   font-weight: 600;
   color: #222222;
+}
+
+@media (max-width: 767px) {
+  .catalog__dropdown-filter {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+  }
 }
 
 .catalog__dropdown-filter-icon {
@@ -12176,6 +12212,12 @@ textarea.form-control-lg {
   width: 284px;
   height: 43px;
   margin: 0 auto 96px auto;
+}
+
+@media (max-width: 1023px) {
+  .catalog__pagination-list {
+    margin: 0 auto 63px auto;
+  }
 }
 
 .catalog__pagination-item {
