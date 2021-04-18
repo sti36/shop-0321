@@ -24,6 +24,7 @@ a {
 }
 
 .dropdown-menu {
+  min-width: 10px;
   padding-right: 30px;
 }
 
